@@ -1,0 +1,158 @@
+{
+  "header": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header.full": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header-layout.desktop": {
+    "children": [
+      "slider-layout#text-test",
+      "sticky-layout#4-desktop"
+    ]
+  },
+
+  "slider-layout#text-test": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": true
+      },
+      "infinite": true,
+      "showNavigationArrows": "never",
+      "showPaginationDots": "never",
+      "blockClass": "carousel"
+    },
+    "children": ["rich-text#1", "rich-text#2", "rich-text#3"]
+  },
+
+  "rich-text#1": {
+    "props": {
+      "text": "Cupom de Desconto: primeira10"
+    }
+  },
+  "rich-text#2": {
+    "props": {
+      "text": "Frete grátis, consulte regulamento*"
+    }
+  },
+  "rich-text#3": {
+    "props": {
+      "text": "Tudo em até 10x sem juros"
+    }
+  },
+
+  "flex-layout.row#3-desktop": {
+    "props": {
+      "blockClass": "menu-link",
+      "horizontalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "vtex.menu@2.x:menu#websites",
+      "flex-layout.col#spacer",
+      "vtex.menu@2.x:menu#institutional"
+    ]
+  },
+  "flex-layout.col#spacer": {
+    "props": {
+      "width": "grow"
+    }
+  },
+  "sticky-layout#4-desktop": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": ["flex-layout.row#4-desktop"]
+  },
+  "flex-layout.row#4-desktop": {
+    "props": {
+      "blockClass": "main-header",
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "flex-layout.col#spacer",
+      "flex-layout.col#category-menu",
+      "flex-layout.col#spacer",
+      "search-bar",
+      "login",
+      "minicart.v2"
+    ]
+  },
+  "flex-layout.col#logo-desktop": {
+    "props": {
+      "verticalAlign": "middle"
+    },
+    "children": ["logo#desktop"]
+  },
+  "flex-layout.col#category-menu": {
+    "props": {
+      "verticalAlign": "middle"
+    },
+    "children": ["vtex.menu@2.x:menu#category-menu"]
+  },
+  "logo#desktop": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "https://storecomponents.vteximg.com.br/arquivos/store-theme-logo.png",
+      "width": "180"
+    }
+  },
+  "header-layout.mobile": {
+    "children": ["sticky-layout#1-mobile"]
+  },
+  "sticky-layout#1-mobile": {
+    "children": ["flex-layout.row#1-mobile"]
+  },
+  "flex-layout.row#1-mobile": {
+    "children": [
+      "drawer",
+      "logo#mobile",
+      "flex-layout.col#spacer",
+      "login",
+      "minicart.v2"
+    ],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "drawer": {
+    "children": ["menu#drawer"]
+  },
+
+  "menu#drawer": {
+    "children": [
+      "menu-item#category-apparel",
+      "menu-item#category-home",
+      "menu-item#more"
+    ],
+    "props": {
+      "orientation": "vertical"
+    }
+  },
+
+  "logo#mobile": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "https://storecomponents.vteximg.com.br/arquivos/store-theme-logo-mobile.png",
+      "width": "70"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "store.custom#about-us": {
+    "path": "/about-us"
+  },
+  "store.custom#faq": {
+    "path": "/faq"
+  },  
+  "store.product": {
+    "path": "/_v/segment/routing/vtex.store@2.x/product/:id/:slug/p",
+    "canonical": "/:slug/p",
+    "contentType": "product"
+  },
+  "store.search": {
+    "path": "/:term/s",
+    "canonical": "/:term",
+    "contentType": "search"
+  },
+  "store.custom#contact-us": {
+    "path": "/contact-us"
+  }
+}
