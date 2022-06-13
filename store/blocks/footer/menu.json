@@ -295,8 +295,21 @@
     ]
   },
 
+  "vtex.menu@2.x:menu#teste-coluna": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#smartphones",
+      "menu-item#videogames",
+      "menu-item#tvs"
+    ]
+  },
+
+
   "menu-item#clothing": {
     "props": {
+      "blockClass":["meu_ovo", "meu_ovo_dois"],
       "id": "menu-item-category-clothing",
       "type": "custom",
       "iconId": null,
@@ -313,6 +326,7 @@
 
   "menu-item#shorts": {
     "props": {
+      "blockClass": "meu_ovo",
       "id": "menu-item-shorts",
       "type": "custom",
       "iconId": null,
@@ -322,13 +336,14 @@
         "href": "/clothing/shorts",
         "noFollow": false,
         "tagTitle": "Shorts",
-        "text": "Shorts"
+        "text": "Shorte"
       }
     }
   },
 
   "menu-item#tank-tops": {
     "props": {
+      "blockClass": "meu_ovo",
       "id": "menu-item-tank-tops",
       "type": "custom",
       "iconId": null,
